@@ -24,7 +24,8 @@ const Home = () => {
                 //console.log(res.data)
                 setData(res.data.results)
             }
-        ).catch( e => console.log("Erro", e) ).finally( () => setIsLoad(false)) //executar para cair erro ou não
+        ).catch( e => console.log("Erro", e) )
+        .finally( () => setIsLoad(false)) //executar para cair erro ou não
     }, [] )
 
     return(
@@ -44,6 +45,8 @@ const Home = () => {
                         </div>
                 ) )} 
                 <Loader load={ isLoad } />
+                {isLoad ? (<p>Carregando...</p>): (<p></p>)}
+                {handleStateComponent}
                 </div>
             </div>
         </div>

@@ -2,6 +2,8 @@ import Navbar from "../../components/NavBar";
 import Loader from "../../components/Loader";
 import { useState, useEffect } from 'react';
 
+import './index.css';
+
 //axios
 import axios from 'axios';
 
@@ -26,21 +28,24 @@ const Home = () => {
     }, [] )
 
     return(
-        <div>
-            <Navbar />
-            <h1>Home</h1>
-            <p>Componente: </p>
-            {data.map( (el, index) => (
-                <div key={index}>
-                    <h6> {el.name} </h6>
-                    <img src={el.image} alt={el.name} />
-                    <p>{el.gender}</p>
-                    <p>{el.origin?.name}</p>
-                    <p>Episódios {el.episode.length} </p>
+        <div className="content">
+            <div className="container">
+                <Navbar />
+                <h1>Home</h1>
+                <p>Componente: </p>
+                <div className="cards-content">
+                    {data.map( (el, index) => ( //el = elementos ou item tanto faz
+                        <div key={index} className="card">
+                            <h6> {el.name} </h6>
+                            <img src={el.image} alt={el.name}  />
+                            <p>{el.gender}</p>
+                            <p className="texto">{el.origin?.name}</p>
+                            <p>Episódios {el.episode.length} </p>
+                        </div>
+                ) )} 
+                <Loader load={ isLoad } />
                 </div>
-            ) )} 
-            <Loader load={ isLoad } />
-            
+            </div>
         </div>
         //cima do div: <button onClick={handleStateComponent } >Mudar estado</button>
     )

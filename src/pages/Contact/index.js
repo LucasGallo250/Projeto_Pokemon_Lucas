@@ -1,5 +1,6 @@
 import Navbar from "../../components/NavBar";
 
+
 import axios from 'axios';
 
 import { useState } from 'react';
@@ -54,6 +55,8 @@ const Contact = () => {
                 />
             </form>
         </div>
+
+        
     )
 }
 

@@ -49,5 +49,11 @@ body {
     margin: 15px 0;
     width: 170px;
     border-radius: 5px;
+}
 
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

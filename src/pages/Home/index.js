@@ -31,7 +31,7 @@ const Home = () => {
     return(
         <div className="content">
             <div className="container">
-                <Navbar />
+                <Navbar className="navbar"/>
                 <h1>Home</h1>
                 <p>Componente: </p>
                 <div className="cards-content">

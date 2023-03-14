@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Tilt+Neon&family=Tilt+Prism&display=swap');
+
+.footerbg{
+    background-color: #221d1e;
+    color: #fff;
+    
+    text-align: center;
+    height: 100px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Tilt Neon', cursive;
+}
+

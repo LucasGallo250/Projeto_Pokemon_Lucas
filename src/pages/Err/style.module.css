@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Tilt+Neon&family=Tilt+Prism&display=swap');
+
+.contain{
+    height: 80vh;
+    width: 100%;
+    
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Nabla', cursive;
+}
+
+.link{
+    text-decoration: none;
+    border-radius: 12px;
+    
+    
+    background-color: #06d6a0;
+    transition: 2s;
+}
+
+.link:hover{
+    background-color: #073b4c;
+    
+}

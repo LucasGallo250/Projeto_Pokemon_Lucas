@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Tilt+Neon&family=Tilt+Prism&display=swap');
+
+.container{
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    flex-direction: column;
+    
+    background-color: #292828;
+    /*
+    color: #FFF;
+    padding: 14px;
+    */
+}
+
+.card{
+    background-color: #ffd166;
+    border-radius: 22px;
+    
+    border-style: solid; /*teste*/
+    border-color: red; /*teste*/
+    
+    
+    margin: 50px; /*pra ficar centralizar*/
+    width: 100%;
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.title{
+    text-align: center;
+    font-family: 'Nabla', cursive;
+    font-size: 60px;
+}
+
+/*ajustar o form pra ficar centralizar, depois ajustar*/
+.form{
+    /*display: grid;*/
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: 600px;
+    width: 100%;
+    
+    /*
+    border-style: solid;
+    border-color: blue;
+    */
+
+}
+
+.inputs{
+    border-radius: 5px;
+    margin: 5px;
+    height: 34px;
+    /*border: #ef476f;*/
+    /*text-align: center; não precisa center, vc que sabe*/
+    
+}
+
+.textarea{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    border-radius: 4px;
+    border: 0;
+    
+    padding: 8px;
+    height: 90px;
+    
+    /*resize: none;*/
+}
+
+.sumbit{
+    background-color: #ef476f;
+    /*color: #073b4c;*/
+    /*text-decoration: none;*/
+    border: solid;
+    border-radius: 20px;
+    border-color: #f51a4d; /*teste*/
+    
+    /*height: 34px;*/
+    padding: 5px;
+    
+    font-size: 25px;
+    font-family: 'Nabla', cursive;
+    
+    
+    cursor: pointer;
+}
+
+.sumbit:hover{
+    transition: 0.6s;
+    background-color: #06d6a0;
+    border-color: #09f1b4;
+}

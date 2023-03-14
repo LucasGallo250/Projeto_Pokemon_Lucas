@@ -6,6 +6,7 @@ import {
 
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+import Err from './pages/Err';
 
 const Router = () => {
     return (
@@ -13,6 +14,7 @@ const Router = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/contato" element={<Contact />} />
+                <Route path="*" element={<Err />} />
             </Routes>
         </BrowserRouter>
     )

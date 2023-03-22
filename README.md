@@ -1,4 +1,4 @@
-# App_Orcamento_Pessoal
+# Projeto_Pokemon_Api_Magalu
 
 ## Descrição do Projeto
 <p>Projeto desenvolvido durante o curso do DIV Magalu da ReactJS - 2023</a> do Douglas Morais</p>

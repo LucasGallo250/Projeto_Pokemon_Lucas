@@ -1,9 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    outline: 0;
+    /*outline: 0;*/
     /*box-sizing: border-box;*/
-    font: 18px "Roboto", sans-serif;
 }
 
 body {
@@ -16,6 +15,8 @@ button {
 }
 
 .container{
+    font: 18px "Roboto", sans-serif;
+
     margin: 0 auto;
     width: 50%; /*100% = completo*/
     padding: 10px;
@@ -24,6 +25,4 @@ button {
     border-color: red;
 }
 
-/*
-O que é pra fazer agora é trazer os dados tipo os cartões e tals ou olha no slack que o Victor deu pontos
-*/
+

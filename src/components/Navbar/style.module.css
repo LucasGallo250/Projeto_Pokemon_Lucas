@@ -1,0 +1,16 @@
+nav{
+    /*
+    border-style: solid;
+    border-color: yellow;
+    */
+
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar_image{
+    width: 200px;
+}

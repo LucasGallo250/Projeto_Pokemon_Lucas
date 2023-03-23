@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    /*box-sizing: border-box;*/
+    font: 18px "Roboto", sans-serif;
+}
+
+body {
+    background: #303031 ;
+    color: #fff;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container{
+    margin: 0 auto;
+    width: 50%; /*100% = completo*/
+    padding: 10px;
+    
+    border-style: solid;
+    border-color: red;
+}
+
+/*
+O que é pra fazer agora é trazer os dados tipo os cartões e tals ou olha no slack que o Victor deu pontos
+*/

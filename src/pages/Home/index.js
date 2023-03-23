@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { api } from '../../service/api';
+import styles  from './style.module.css';
 
 const Home = () => {
     const [ data, setDate ] = React.useState([])
@@ -9,19 +10,19 @@ const Home = () => {
     React.useEffect( () => {
         setIsLoad(true);
         api.get('pokemon?limit=100&offset=0')
-        .then(  res => {
+        .then( res => {
             console.log(res.data);
-            setDate();
+            setDate(res.data.results);
         })
-        .catch( e => console.warn(e))
+        .catch( e => console.warn("ERROR", e))
         .finally(() => {
             //console.log('finalizado')
-            setIsLoad(false)
+            setIsLoad(false);
         } )
     }, [])
     
     return(
-        <div>
+        <div className={styles.container}>
             <div>Pokemon list</div>
             <div>
                 { isLoad && (

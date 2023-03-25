@@ -21,8 +21,98 @@ button {
     width: 50%; /*100% = completo*/
     padding: 10px;
     
+    text-align: center;
+    /*
     border-style: solid;
     border-color: red;
+    */
 }
 
+.content{
+    /*
+    background: #fff;
+    */
+    /*
+    border-style: solid;
+    border-color: yellow;
+    */
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*
+    align-items: center;
+    */   
+}
+
+/*
+.content:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+*/
+
+.cardswrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    background: #fff;
+    color: #2F4F4F;
+    
+    
+    border-style: solid;
+    border-color: #2F4F4F;
+
+    border-radius: 12px;
+    padding: 10px;
+    margin: 10px;    
+    
+    /*
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    */
+
+    text-align: center;
+    /*white-space: nowrap;
+    */
+}
+
+.paginate{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 22px;
+    margin-top: 40px;
+}
+
+.paragrafo{
+    
+    margin-top: 17px;
+}
+
+.botao_pagina{
+    background-color: #17a1cf;
+    border-color: #89defa;
+    color: #1d3138;
+    height: 45px;
+    padding: 10px;
+    margin: 5px;
+
+    font-size: 15px;
+    font-family: 'Nabla', cursive;
+    
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #93def7;
+}
+
+.botao_pagina:hover{
+    transition: 0.3s;
+    background-color: #51f0c5;
+    border-color: #09f1b4;
+    color: #054938;
+}

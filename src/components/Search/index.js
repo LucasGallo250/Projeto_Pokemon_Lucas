@@ -2,32 +2,38 @@ import React from 'react';
 import styles from './style.module.css'
 
 const Searchbar = () => {
-    let searchs = "";
+    //let searchs = "";
 
     const [ search, setSearch ] = React.useState("");
 
-    const onChange = (e) => {
-        //console.log(e.target.value);
+    const handleSubmit = (e) => {
+        
+        console.log(search);
         //searchs = e.target.value;
+        if(!search) return;
         setSearch(e.target.value);
     }
 
+    /* 
     const onClick = (e) => {
         console.log('Aprontando Botão') //teste
     }
+    */
 
     return (
         <div className={styles.searchbar_container}>
 
-            <div className={styles.searchbar}>
+            <div onSubmit={handleSubmit} className={styles.searchbar}>
                 <input 
                 placeholder="Buscar pokemon..."
-                onChange={onChange}
+                type="text"
+                onChange={ (e) => setSearch(e.target.value) }
+                value={search}
                 />
             </div>
 
             <div className={styles.searchbar_btn}>
-                <button onClick={onClick} >Buscar</button>
+                <button type="sumbit" onSubmit={handleSubmit}>Buscar</button>
             </div>
 
         </div>

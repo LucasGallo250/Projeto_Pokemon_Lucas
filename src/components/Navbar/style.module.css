@@ -1,4 +1,6 @@
-nav{
+.nav_linkContent{
+    background-color: #17a1cf;
+
     /*
     border-style: solid;
     border-color: yellow;
@@ -13,4 +15,9 @@ nav{
 
 .navbar_image{
     width: 200px;
+    margin: 0 auto;
+    /*
+    border-style: solid;
+    border-color: yellow;
+    */
 }

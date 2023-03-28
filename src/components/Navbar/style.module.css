@@ -1,3 +1,4 @@
+
 .nav_linkContent{
     background-color: #17a1cf;
 
@@ -11,6 +12,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    
 }
 
 .navbar_image{
@@ -21,3 +23,37 @@
     border-color: yellow;
     */
 }
+
+/*
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #F08030;
+    color: white;
+  }
+
+  .navbar__logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .navbar__cart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .navbar__cart__icon {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+  }
+  
+  .navbar__cart__count {
+    font-size: 1.5rem;
+  }
+*/

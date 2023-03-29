@@ -15,86 +15,6 @@ const Home = () => {
 
     const [cart, setCart] = React.useState([]);
 
-    /*
-    React.useEffect( () => {
-        setIsLoad(true);
-        //api.get(`pokemon?page=${[page]}`).then( 
-        api.get('pokemon?limit=30&offset=0')
-        .then( res => {
-            console.log(res.data);
-            setDate(res.data.results);
-            setInfo(res.data.info)
-        })
-        .catch( e => console.warn("ERROR", e))
-        .finally(() => {
-            //console.log('finalizado')
-            setIsLoad(false);
-        } )
-    }, [])
-    
-    const handleIncrementPage = (ctx) => {
-        if(page >= info.page){
-            return
-        } else {
-            setPage(page + 1)
-            window.scrollTo(0, 0)
-        }
-    }
-
-    const handleDecrementPage = () => {
-        if(page <= 0 ) {
-            return
-        } else {
-            setPage(page - 1)
-            window.scrollTo(0, 0)
-        }
-    }
-
-
-    
-
-    return(
-        <div>
-            <Navbar />
-            <Searchbar />
-        
-            <div className={styles.container}>
-                <div>POKEMON LISTAS</div>
-                <div>
-                    { isLoad && (
-                        <div>
-                            <h2>Aguarde, carregando...</h2>
-                        </div>
-                    )}
-
-                    <div className={styles.cardswrapper}>
-                        <div className={styles.content}>
-                            { data.map( ( el, index ) => (
-                                <div key={index} className={styles.card}>
-                                    <h3> {el.name} </h3>
-                                    <img src={el.image} alt={el.name} />
-                                    
-                                    <h4> {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(index + 2)} </h4>
-                                    <button onClick={() => console.log('Adicionado')} >Adicionar ao carrinho</button>
-                                </div>
-                            ) ) }
-                        </div>
-                    </div>
-
-                    
-                    <div className={styles.paginate}>
-                        <button className={styles.botao_pagina} onClick={() => handleDecrementPage()  }>Página anterior</button>
-                        <p className={styles.paragrafo}>{page} Páginas</p>
-                        <button className={styles.botao_pagina} onClick={() => handleIncrementPage()}>Próxima Página</button>
-                    </div>
-                </div>
-
-            </div>
-            <Footer footerText="Todos os direitos Resevados © 2023"/>
-        </div>
-    )
-}
-*/
 
 const fetchPokemonDetails = async (url) => {
     try {
@@ -105,6 +25,7 @@ const fetchPokemonDetails = async (url) => {
     }
 }
 
+//useEffect(() => {})
 const fetchPokemons = async (page) => {
     setIsLoading(true);
     try {
@@ -132,14 +53,20 @@ React.useEffect(() => {
 }, [page]);
 
 const handleIncrementPage = () => {
-    if (page < info.pages) {
+    if (page >= info.pages) {
+        return
+    } else {
         setPage(page + 1);
+        window.scrollTo(0, 0)
     }
 }
 
 const handleDecrementPage = () => {
-    if (page > 1) {
+    if (page <= 0) {
+        return
+    } else {
         setPage(page - 1);
+        window.scrollTo(0, 0)
     }
 }
 
@@ -166,11 +93,13 @@ const cartTotal = cart.reduce((acc, item) => acc + item.price, 0);
 
 return(
     <div>
-        <Navbar setCart={setCart} handleCheckout={handleCheckout}/>
+        <Navbar />
         <Searchbar />
     
         <div className={styles.container}>
-            <div>POKEMON LISTAS</div>
+            
+            <strong>POKEMON LISTAS</strong>
+
             <div>
                 {isLoading ? (
                     <div>
@@ -182,8 +111,11 @@ return(
                             { data.map( ( pokemon, index ) => (
                                 <div key={index} className={styles.card}>
                                     <h3> {pokemon.name} </h3>
-                                    <img className={styles.imagem_poke} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`} alt={pokemon.name} />
-                                    <h4 className={styles.preco} > {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(index + 2)} </h4>
+                                    <img className={styles.imagem_poke} src={pokemon.image} alt={pokemon.name} />
+                                    <h4 className={styles.preco} > {Intl.NumberFormat('pt-BR', { style: 'currency', 
+                                    currency: 'BRL'})
+                                    .format(index + 2)} 
+                                    </h4>
                                     <button className={styles.botao_carrinho} onClick={() => handleAddToCart(pokemon.name) }>Adicionar ao carrinho</button>
                                 </div>
                             ) ) }
@@ -193,12 +125,12 @@ return(
 
                 <div className={styles.paginate}>
                     <button className={styles.botao_pagina} onClick={handleDecrementPage}>Página anterior</button>
-                    <p className={styles.paragrafo}>{page} de {info.pages} Páginas</p>
-                    <button className={styles.botao_pagina} onClick={handleIncrementPage}>Próxima Página</button>
+                    <p className={styles.paragrafo}>{page} de {info?.pages} Páginas</p>
+                    <button className={styles.botao_pagina} onClick={handleIncrementPage} disable={page === info.pages}>Próxima Página</button>
                 </div>
             </div>
         </div>
-        <Footer footerText="Todos os direitos Resevados © 2023"/>
+        <Footer footerText="Todos os direitos Resevados © 2023 | Lucas Gallo"/>
     </div>
 )};
 

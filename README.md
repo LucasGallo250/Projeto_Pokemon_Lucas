@@ -1,8 +1,8 @@
-# Projeto_Pokemon_Api_Magalu
+# Pokemon_React
 
 ## Descrição do Projeto
 <p>Projeto desenvolvido durante o curso do DIV Magalu da ReactJS - 2023</a> do Douglas Morais</p>
-<p>Cada loja possui o mesmo comportamento, porém com seu estilo e seu catálogo de pokemons referente ao seu tipo. Para o desenvolvimento foi utilizado ReactJS consumindo a API do Pokemon v2 -> https://pokeapi.co/</p>
+<p>Frontend Pokemon construído com React. Para o desenvolvimento foi utilizado ReactJS consumindo a API do Pokemon v2 -> https://pokeapi.co/</p>
 
 <p>Desenvolvido:</p>
 
